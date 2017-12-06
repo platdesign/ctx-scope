@@ -1,11 +1,13 @@
 {
 	"name": "ctx-scope",
 	"description": "Scope matching with arrays like hapi uses",
-	"author": [{
-		"name": "Christian Blaschke",
-		"email": "mail@platdesign.de",
-		"url": "https://github.com/platdesign"
-	}],
+	"author": [
+		{
+			"name": "Christian Blaschke",
+			"email": "mail@platdesign.de",
+			"url": "https://github.com/platdesign"
+		}
+	],
 	"main": "lib/ctx-scope.js",
 	"version": "0.0.0",
 	"dependencies": {},
