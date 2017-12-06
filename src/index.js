@@ -15,6 +15,7 @@ function getImpl(object, property) {
 		return value;
 	}
 	// Note that typeof null === 'object'
+	/* istanbul ignore next */
 	if (value === null || typeof value !== 'object') {
 		return undefined;
 	}

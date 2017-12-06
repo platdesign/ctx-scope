@@ -12,5 +12,11 @@
 	],
 	"cache": true,
 	"all": true,
-	"report-dir": "./.coverage"
+	"report-dir": "./.coverage",
+	"exclude":[
+		".git",
+		"webpack.config.js",
+		"lib",
+		"test"
+	]
 }

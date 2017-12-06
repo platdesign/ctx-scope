@@ -4,7 +4,7 @@
 const Code = require('code');
 const expect = Code.expect;
 
-const ctxScope = require('../');
+const ctxScope = require('../src');
 
 
 describe('ctx-scope', function() {
@@ -22,8 +22,8 @@ describe('ctx-scope', function() {
 
 
 		expect(() => {
-			let res = ctxScope.match(['a', 'b'], ['c']);
-		})
+				let res = ctxScope.match(['a', 'b'], ['c']);
+			})
 			.to.throw(Error);
 
 	});
@@ -31,8 +31,8 @@ describe('ctx-scope', function() {
 	it('none of every', function() {
 
 		expect(() => {
-			let res = ctxScope.match(['a', '+b'], ['a']);
-		})
+				let res = ctxScope.match(['a', '+b'], ['a']);
+			})
 			.to.throw(Error);
 
 	});
@@ -63,8 +63,8 @@ describe('ctx-scope', function() {
 	it('one of none', function() {
 
 		expect(() => {
-			let res = ctxScope.match(['a', '-b'], ['b']);
-		})
+				let res = ctxScope.match(['a', '-b'], ['b']);
+			})
 			.to.throw(Error);
 
 	});
@@ -76,14 +76,15 @@ describe('ctx-scope', function() {
 			params: {
 				test: 123
 			},
-			qwe:321,
-			test:[1,2,3]
+			qwe: 321,
+			test: [1, 2, 3]
 		});
 
 		expect(res)
 			.to.be.true();
 
 	});
+
 
 
 });
