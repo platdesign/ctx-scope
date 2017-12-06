@@ -7,8 +7,7 @@ const EXP = /(\{([0-9A-Za-z\.\[\]^\}]*)\})/;
 
 
 function getImpl(object, property) {
-	var t = this,
-		elems = Array.isArray(property) ? property : property.split('.'),
+	let elems = Array.isArray(property) ? property : property.split('.'),
 		name = elems[0],
 		value = object[name];
 
@@ -29,7 +28,7 @@ module.exports = class CtxScope {
 
 	static match(def, current, ctx) {
 		ctx = ctx || {};
-		let last = def.length - 1;
+		// let last = def.length - 1;
 
 		def = def.map(item => {
 
@@ -43,7 +42,7 @@ module.exports = class CtxScope {
 			return replaced;
 		});
 
-		let somes = def.filter(item => !['+', '-'].includes(item.substr(0, 1)))
+		let somes = def.filter(item => !['+', '-'].includes(item.substr(0, 1)));
 		let everys = def.filter(item => item.substr(0, 1) === '+').map(item => item.substr(1));
 		let nones = def.filter(item => item.substr(0, 1) === '-').map(item => item.substr(1));
 
@@ -55,10 +54,10 @@ module.exports = class CtxScope {
 
 		let res = [everyRes, nonesRes, somesRes].every(Boolean);
 
-		if(res !== true) {
+		if (res !== true) {
 			throw new Error();
 		}
 
 		return true;
 	}
-}
+};

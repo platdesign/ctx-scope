@@ -1,26 +1,38 @@
 {
-  "name": "ctx-scope",
-  "description": "A project by platdesign.de",
-  "author": [
-    {
-      "name": "Christian Blaschke",
-      "email": "mail@platdesign.de",
-      "url": "https://github.com/platdesign"
-    }
-  ],
-  "version": "0.0.0",
-  "dependencies": {},
-  "repository": "",
-  "devDependencies": {
-    "code": "^5.1.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^4.0.1",
-    "nyc": "^11.3.0"
-  },
-  "scripts": {
-    "test": "NODE_ENV=test mocha",
-    "test:w": "NODE_ENV=test mocha -w",
-    "coverage": "nyc npm run test",
-    "open:coverage": "open ./.coverage/index.html -a \"Google Chrome\""
-  }
+	"name": "ctx-scope",
+	"description": "A project by platdesign.de",
+	"author": [{
+		"name": "Christian Blaschke",
+		"email": "mail@platdesign.de",
+		"url": "https://github.com/platdesign"
+	}],
+	"main": "lib/ctx-scope.js",
+	"version": "0.0.0",
+	"dependencies": {},
+	"repository": "",
+	"devDependencies": {
+		"code": "^5.1.2",
+		"istanbul": "^0.4.5",
+		"mocha": "^4.0.1",
+		"nyc": "^11.3.0",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.0.2",
+		"babel-loader": "^7.1.2",
+		"babel-plugin-add-module-exports": "^0.2.1",
+		"babel-preset-es2015": "^6.24.1",
+		"chai": "^4.1.2",
+		"eslint": "^4.12.0",
+		"eslint-loader": "^1.9.0",
+		"webpack": "^3.8.1",
+		"yargs": "^10.0.3"
+	},
+	"scripts": {
+		"build": "webpack --env dev && webpack --env build && npm run test",
+		"dev": "webpack --progress --colors --watch --env dev",
+		"test": "NODE_ENV=test mocha",
+		"test:w": "NODE_ENV=test mocha -w",
+		"coverage": "nyc npm run test",
+		"open:coverage": "open ./.coverage/index.html -a \"Google Chrome\""
+	}
 }
