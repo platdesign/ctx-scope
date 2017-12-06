@@ -1,4 +1,4 @@
 node_modules/
 temp/
-vendor/
-
+.coverage/
+.nyc_output/
