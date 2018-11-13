@@ -9,7 +9,7 @@
 		}
 	],
 	"main": "lib/ctx-scope.js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"dependencies": {},
 	"repository": "https://github.com/platdesign/ctx-scope.git",
 	"devDependencies": {
